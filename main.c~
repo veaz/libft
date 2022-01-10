@@ -1,0 +1,67 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/10 12:43:39 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/10 18:51:13 by vaguilar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <ctype.h>
+#include <string.h>
+#include <stdio.h> //Eliminar
+#include "libft.a"
+
+int	main(){
+
+	char	c = 'p'; //Caracter
+	char	cadena[] = "123";
+	char	lorem[] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum metus risus, eu dapibus ligula bibendum vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam vitae cursus nibh, quis scelerisque ex. Duis suscipit tempus risus ac sodales. Cras in dictum tortor, a condimentum arcu. Praesent sed sodales mauris. Cras commodo mauris id tellus tempor, ac eleifend arcu viverra. Pellentesque in elit sed risus accumsan commodo vitae ut magna. Nulla libero ipsum, feugiat vel rutrum in, iaculis non orci.
+
+Praesent nec neque velit. Duis at orci sagittis, fringilla lacus non, vestibulum turpis. Suspendisse quam ante, ornare nec felis id, auctor bibendum velit. Aenean elit nibh, vulputate et aliquet at, egestas in mauris. Morbi maximus, nibh suscipit ornare porta, velit elit vehicula mauris, ac vulputate purus ligula at nunc. Vivamus eleifend nulla eu eros tristique, tristique scelerisque mauris venenatis. Nulla volutpat dignissim est, non elementum metus consectetur vitae. Pellentesque placerat finibus magna, vitae dictum justo placerat ac. Morbi felis augue, laoreet vel augue eget, auctor accumsan lacus. In eu mi sagittis, ornare risus nec, euismod orci. Donec ipsum magna, ultricies quis finibus in, cursus a est. Nullam vel elit et nibh blandit semper sit amet et sem. Suspendisse nibh tortor, tincidunt cursus est id, volutpat venenatis metus. Vivamus elementum arcu sit amet purus gravida blandit.
+
+Quisque velit leo, vehicula sit amet gravida non, tristique quis ex. Nullam quis lectus ex. Ut quis pellentesque purus, tempor venenatis ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut consequat blandit neque. Nam sapien nisi, feugiat id interdum ac, condimentum commodo nunc. Morbi lobortis lorem ac sem varius venenatis. Quisque venenatis eros at mi auctor aliquet. Quisque velit ex, auctor vel rhoncus et, elementum nec leo. Ut sed eros iaculis, rhoncus mauris in, pretium neque. Aenean magna nisi, consectetur sit amet sapien vel, interdum feugiat quam. Nunc consectetur condimentum ornare. Quisque vitae laoreet est.
+
+Nunc pharetra bibendum enim non luctus. Aliquam rhoncus, sapien sit amet consequat tristique, mauris nulla tincidunt orci, sit amet porta sapien nisl non arcu. Morbi laoreet turpis ac arcu placerat ullamcorper. Cras sed velit fermentum, imperdiet nunc egestas, consequat urna. Morbi quam nibh, facilisis vel nisl et, blandit aliquet est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque libero metus, pellentesque vitae suscipit id, tempus at erat. Maecenas tincidunt magna vitae risus hendrerit tincidunt. Nulla vel tincidunt tellus. Suspendisse luctus elementum est quis commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque ultricies suscipit lectus a hendrerit. Curabitur et commodo mauris. Nam ac blandit eros, vel vestibulum diam. Quisque sagittis maximus ligula, id vehicula arcu elementum vitae.
+
+Pellentesque at est ultricies, scelerisque nisi eget, consequat ipsum. Aenean efficitur pulvinar tellus at dapibus. Suspendisse a erat pulvinar, finibus odio aliquam, tempus urna. Morbi dapibus sit amet ex et lacinia. Suspendisse tempus massa ac nisi condimentum mattis. Duis pulvinar in lectus ut luctus. Cras luctus sit amet velit non semper. Nam eu purus nibh. Fusce imperdiet, neque et lacinia rhoncus, orci purus fermentum diam, nec feugiat quam diam eu dui.
+
+";
+
+	printf("--isalpha --\nCaracter = %c\n", c); //1
+	printf("ft_isalpha = %i\n", ft_isalpha(c));
+	printf("isalpha = %i\n\n", isalpha(c));
+
+	printf("--isdigit --\nCaracter = %c\n", c); //2
+	printf("ft_isdigit = %i\n", ft_isdigit(c));
+	printf("isdigit = %i\n\n", isdigit(c));
+
+	printf("--isalnum--\nCaracter = %c\n", c); //3
+	printf("ft_isalnum = %i\n", ft_isalnum(c));
+	printf("isalnum = %i\n\n", isalnum(c));
+
+	printf("--isasc--\nCaracter = %c\n", c); //4
+	printf("ft_isascii = %i\n", ft_isascii(c));
+	printf("isascii = %i\n\n", isascii(2));
+
+	printf("--isprint--\nCaracter = %c\n", c); //5
+	printf("ft_isprint = %i\n", ft_isprint(c));
+	printf("isprint = %i\n\n", isprint(c));
+
+	printf("--strlen--\nCadena = %s\n", cadena); //6
+	printf("ft_strlen = %i\n", ft_strlen(cadena));
+	printf("strlen = %lu\n\n", strlen(cadena));
+
+	printf("--memset--\nCadena = %s\n", cadena); //7
+	printf("ft_memset = %s\n", ft_memset(cadena, '*', 2));
+	printf("memset = %s\n\n", memset(cadena, '*', 2));
+
+	printf("--bzero--\nCadena = %s\n", cadena); //8
+	printf("ft_bzero = %s\n", ft_bzero(cadena, 1));
+i	printf("bzero = %s \n", bzero(lorem, 1));
+	printf("FINAL = %s", lorem);
+
+}
