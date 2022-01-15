@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:43:39 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 15:21:18 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/15 18:48:27 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,13 +149,40 @@ int	main(){
 	//printf("ft_strchr = %s\n", ft_strchr(strchr1, strchr2));
 	//printf("strchr = %s\n\n", strchr(strchr1, strchr2));
 
-	char	strrchr1[] = "www.google.com";
-	char	strrchr2 = '.';
-	printf("--strrchr--\n");
-	printf("Parametros (www.google.com, '.')\n");
-	printf("ft_strrchr = %s\n", ft_strrchr(strrchr1, 10000));
-	printf("strrchr = %s\n\n", strrchr(strrchr1, 10000));
+	//char	strrchr1[] = "www.google.com";
+	//char	strrchr2 = '.';
+	//printf("--strrchr--\n");
+	//printf("Parametros (www.google.com, '.')\n");
+	//printf("ft_strrchr = %s\n", ft_strrchr(strrchr1, strrchr2));
+	//printf("strrchr = %s\n\n", strrchr(strrchr1, strrchr2));
 
 	printf("--strncmp--\n");
-    
+	char	strncmp1[6] = "AAAAA";
+	char	strncmp2[6] = "AAAAA";
+	printf("1 = %s\n", strncmp1);
+	printf("2 = %s\n", strncmp2);
+	printf("ft_strncmp = %d\n", ft_strncmp(strncmp1, strncmp2,6));
+	printf("strncmp = %d\n\n", strncmp(strncmp1, strncmp2, 6));
+
+	char	memchr1[] = "www.google.com";
+	char	memchr2 = '.';
+	printf("--memchr--\n");
+	printf("Parametros (www.google.com, '.')\n");
+	printf("ft_memchr = %s\n", ft_memchr(memchr1, memchr2, 14));
+	printf("memchr = %s\n\n", memchr(memchr1, memchr2, 14));
+
+	printf("--memcmp--\n");
+	char	memcmp1[13] = "AAAAAAAAAAAA";
+	char	memcmp2[13] = "AAAAAAAAAAAA";
+	printf("1 = %s\n", memcmp1);
+	printf("2 = %s\n", memcmp2);
+	printf("ft_strncmp = %d\n\n", ft_memcmp(memcmp1, memcmp2, 13));
+	printf("strncmp = %d\n\n", memcmp(memcmp1, memcmp2, 13));
+
+
+	printf("--memcmp--\n");
+
+
+
+
 }

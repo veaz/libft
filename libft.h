@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:58:42 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 14:34:31 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/15 18:31:44 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,8 @@ char	*ft_strchr(char *s, int c);
 
 char	*ft_strrchr(char *s, int c);
 
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
+char	*ft_memchr(char *s, int c, int n);
+
+int		ft_memcmp(char *s1, char *s2, unsigned int n);
