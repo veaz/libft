@@ -6,13 +6,14 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:47:18 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 12:47:21 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/14 14:41:00 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(char c) //3
+int ft_isalnum(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+			|| ( c >= '0' && c <= '9'))
 			return (1);
 	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:46:24 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 12:46:33 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/14 13:32:54 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(unsigned char c) //2
+int	ft_isdigit(int c)
 {
 	if (!(c >= '0' && c <= '9'))
 		return (0);

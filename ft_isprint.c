@@ -6,11 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:51:16 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 12:51:19 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/14 15:05:45 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(unsigned char c) //5
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= '~')
 		return (1);

@@ -6,16 +6,16 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:54:04 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 12:54:21 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/14 15:48:23 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str) //6
+int	ft_strlen(const char *s)
 {
 	int	a;
 
 	a = 0;
-	while (str[a] != '\0')
+	while (s[a] != '\0')
 	{
 		a++;
 	}

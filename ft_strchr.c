@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 12:48:41 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/14 14:50:53 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/15 14:18:15 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/15 14:26:31 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+char	*ft_strchr(char *s, int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int	x;
+	char *ptr;
+
+	x = 0;
+	ptr = s;
+	while (*ptr != '\0')
+	{	
+		if (*ptr == c)
+			return (ptr);
+		ptr++;
+	}
+	return (ptr);
 }

@@ -6,11 +6,13 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:56:41 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 12:56:44 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/15 13:46:18 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	counter(char *ptr) //12
+#include "libft.h" //DELETE
+
+int	counter(char *ptr)
 {
 	int	c;
 
@@ -22,23 +24,29 @@ int	counter(char *ptr) //12
 	return (c);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size) //12
+int	ft_strlcat(char *dst, char *src, int dstsize)
 {
-	unsigned int	a;
-	int				b;
-	int				c;
-	int				retorno;
+	int	srcsize;
+	int	count;
+	int	countsrc;
+	int	countdst;
 
-	a = 0;
-	c = counter(src);
-	b = counter(dest);
-	b++;
-	while (a < (size - 1))
+	srcsize = counter(src);
+	countsrc = srcsize;
+	countdst = dstsize;
+	count = 1;
+	
+	while (count <= 5)
 	{
-		dest[b] = src[a];
-		a++;
-		b++;
+		//*(dst + (dstsize + count)) = *(src + count);
+		//dst[dstsize + count] = src[count];
+		*(dst + (dstsize + count)) = 'P'; //NO SE QUIERE AGREGAR MAS DEL TAMANO DE DST
+		count++;
 	}
-	retorno = b + c;
-	return (retorno);
+	
+	printf("CADENA DST = %s\n", dst);
+
+
+	return (dstsize + srcsize);
+
 }

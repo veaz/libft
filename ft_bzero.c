@@ -6,16 +6,16 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:55:16 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 12:55:19 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/15 10:34:38 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_bzero(char *str, int n) //8
+char *ft_bzero(char *s, int n)
 {
 	while (n >= 0)
 	{
-		*(str + n) = '\0';
+		*(s + n) = '\0';
 		n--;
 	}
-	return (str);
+	return (s);
 }

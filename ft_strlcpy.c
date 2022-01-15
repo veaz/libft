@@ -6,11 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:55:50 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 12:55:52 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/15 12:11:18 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size) //11
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	pos;

@@ -6,16 +6,16 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:54:51 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 13:09:18 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/15 10:28:25 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_memset(char *str, char c, int n) //7 ?? RECIBE INT, PARA CAMBIAR POR UNSIGNED CHAR
+char	*ft_memset(char *b, int c, int len)
 {
-	while (n >= 0)
+	while (len >= 0)
 	{
-		*(str + n) = c;
-		n--;
+		*(b + len) = c;
+		len--;
 	}
-	return (str);
+	return (b);
 }

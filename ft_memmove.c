@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 12:48:41 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/14 14:50:53 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/15 11:25:26 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/15 11:39:23 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+char	*ft_memmove(char *dst, char *src, int len)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int a;
+
+	a = len;
+	while (len >= 0)
+	{
+		*(dst + len) = *(src + len);
+		len--;
+	}
+	*(dst + a) = '\0';
+	return (dst);
 }

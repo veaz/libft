@@ -6,27 +6,45 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:58:42 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/11 13:11:59 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/15 14:34:31 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>//DELETE
+#include <ctype.h>//DELETE - FUNTIONS ORIGINALS
 #include <string.h>
 #include <unistd.h> //INNECESARIA?
 #include <stdio.h> //DELETE
 
-int		ft_isalpha(unsigned char c);
+int		ft_isalpha(int c);
 
-int		ft_isdigit(unsigned char c);
+int		ft_isdigit(int c);
 
-int		ft_isalnum(char c);
+int		ft_isalnum(int c);
 
-int		ft_isascii(char c);
+int		ft_isascii(int c);
 
-int		ft_isprint(unsigned char c);
+int		ft_isprint(int c);
 
-int		ft_strlen(const char *str);
+int		ft_strlen(const char *s);
 
-char	*ft_memset(char *str, char c, int n);
+char	*ft_memset(char *b, int c, int len);
 
-char	*ft_bzero(char *str, int n);
+char	*ft_bzero(char *s, size_t n);
+
+char	*ft_memcpy(char *dst, char *src, int n);
+
+char	*ft_memmove(char *dst, char *src, int len);
+
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+
+int	ft_strlcat(char *dst, char *src,int dstsize);
+
+char	ft_toupper(int c);
+
+char	ft_tolower(int c);
+
+char	*ft_strchr(char *s, int c);
+
+char	*ft_strrchr(char *s, int c);
+
+
