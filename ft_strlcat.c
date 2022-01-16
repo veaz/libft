@@ -28,12 +28,12 @@ int	ft_strlcat(char *dst, char *src, int dstsize)
 {
 	int	srcsize;
 	int	count;
-	int	countsrc;
-	int	countdst;
+	//int	countsrc;
+	//int	countdst;
 
 	srcsize = counter(src);
-	countsrc = srcsize;
-	countdst = dstsize;
+	//countsrc = srcsize;
+	//countdst = dstsize;
 	count = 1;
 	
 	while (count <= 5)

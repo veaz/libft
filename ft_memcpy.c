@@ -10,17 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_memcpy(char *dst, char *src, int n)
-{
-	int a;
+#include "libft.h"
 
-	a = n;
-	while (n >= 0)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{	
+	char	*ptrdest;
+	char	*ptrsrc;
+	size_t	a;
+
+	a = 0;
+	ptrdest = (char *)dest;
+	ptrsrc = (char *)src;
+	while (a < n)
 	{
-		*(dst + n) = *(src + n);
-		n--;
+		*(ptrdest + a) = *(ptrsrc + a);
+		a++;
 	}
-	*(dst + a) = '\0';
-
-	return (dst);
+	return (dest);
 }

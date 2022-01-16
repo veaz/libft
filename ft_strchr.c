@@ -12,10 +12,8 @@
 
 char	*ft_strchr(char *s, int c)
 {
-	int	x;
 	char *ptr;
 
-	x = 0;
 	ptr = s;
 	while (*ptr != '\0')
 	{	

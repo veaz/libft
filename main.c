@@ -93,14 +93,14 @@ int	main(){
 	//printf("bzero = %s \n", bzero(bcd, sizeof(bcd)));
 	//printf("Cadena = %s\n\n", bcd);
 
-	//char cde0[6] = "ABCDE";
-	//char cde[6] = "12345";
-	//printf("--memcpy--\n");
-	//printf("Cadena dst= %s\n", cde0);
-	//printf("Cadena src = %s\n", cde);
-	//printf("ft_memcpy = %s\n", ft_memcpy(cde0, cde, 1));
-	//printf("memcpy = %s \n", memcpy(cde0, cde, 1));
-	//printf("Cadena dst FINAL= %s\n\n", cde0);
+	char cde0[6] = "ABCDE";
+	char cde[6] = "12345";
+	printf("--memcpy--\n");
+	printf("Cadena dst= %s\n", cde0);
+	printf("Cadena src = %s\n", cde);
+	printf("ft_memcpy = %p\n", ft_memcpy(cde0, cde, 1));
+	printf("memcpy = %p \n", memcpy(cde0, cde, 1));
+	printf("Cadena dst FINAL= %s\n\n", cde0);
 
 	//char def1[6] = "ABCDE";
 	//char def2[6] = "12345";
@@ -156,31 +156,31 @@ int	main(){
 	//printf("ft_strrchr = %s\n", ft_strrchr(strrchr1, strrchr2));
 	//printf("strrchr = %s\n\n", strrchr(strrchr1, strrchr2));
 
-	printf("--strncmp--\n");
-	char	strncmp1[6] = "AAAAA";
-	char	strncmp2[6] = "AAAAA";
-	printf("1 = %s\n", strncmp1);
-	printf("2 = %s\n", strncmp2);
-	printf("ft_strncmp = %d\n", ft_strncmp(strncmp1, strncmp2,6));
-	printf("strncmp = %d\n\n", strncmp(strncmp1, strncmp2, 6));
+	//printf("--strncmp--\n");
+	//char	strncmp1[6] = "AAAAA";
+	//char	strncmp2[6] = "AAAAA";
+	//printf("1 = %s\n", strncmp1);
+	//printf("2 = %s\n", strncmp2);
+	//printf("ft_strncmp = %d\n", ft_strncmp(strncmp1, strncmp2,6));
+	//printf("strncmp = %d\n\n", strncmp(strncmp1, strncmp2, 6));
 
-	char	memchr1[] = "www.google.com";
-	char	memchr2 = '.';
-	printf("--memchr--\n");
-	printf("Parametros (www.google.com, '.')\n");
-	printf("ft_memchr = %s\n", ft_memchr(memchr1, memchr2, 14));
-	printf("memchr = %s\n\n", memchr(memchr1, memchr2, 14));
+	//char	memchr1[] = "www.google.com";
+	//char	memchr2 = '.';
+	//printf("--memchr--\n");
+	//printf("Parametros (www.google.com, '.')\n");
+	//printf("ft_memchr = %s\n", ft_memchr(memchr1, memchr2, 14));
+	//printf("memchr = %s\n\n", memchr(memchr1, memchr2, 14));
 
-	printf("--memcmp--\n");
-	char	memcmp1[13] = "AAAAAAAAAAAA";
-	char	memcmp2[13] = "AAAAAAAAAAAA";
-	printf("1 = %s\n", memcmp1);
-	printf("2 = %s\n", memcmp2);
-	printf("ft_strncmp = %d\n\n", ft_memcmp(memcmp1, memcmp2, 13));
-	printf("strncmp = %d\n\n", memcmp(memcmp1, memcmp2, 13));
+	//printf("--memcmp--\n");
+	//char	memcmp1[13] = "AAAAAAAAAAAA";
+	//char	memcmp2[13] = "AAAAAAAAAAAA";
+	//printf("1 = %s\n", memcmp1);
+	//printf("2 = %s\n", memcmp2);
+	//printf("ft_strncmp = %d\n\n", ft_memcmp(memcmp1, memcmp2, 13));
+	//printf("strncmp = %d\n\n", memcmp(memcmp1, memcmp2, 13));
 
 
-	printf("--memcmp--\n");
+	//printf("--memcmp--\n");
 
 
 

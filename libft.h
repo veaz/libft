@@ -27,11 +27,11 @@ int		ft_isprint(int c);
 
 int		ft_strlen(const char *s);
 
-char	*ft_memset(char *b, int c, int len);
+void		*ft_memset(void *s, int c, size_t len);
 
-char	*ft_bzero(char *s, size_t n);
+void		ft_bzero(void *s, size_t n);
 
-char	*ft_memcpy(char *dst, char *src, int n);
+void		*ft_memcpy(void *dest, const void *src, size_t n);
 
 char	*ft_memmove(char *dst, char *src, int len);
 
