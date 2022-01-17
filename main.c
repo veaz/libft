@@ -93,22 +93,26 @@ int	main(){
 	//printf("bzero = %s \n", bzero(bcd, sizeof(bcd)));
 	//printf("Cadena = %s\n\n", bcd);
 
-	char cde0[6] = "ABCDE";
-	char cde[6] = "12345";
-	printf("--memcpy--\n");
-	printf("Cadena dst= %s\n", cde0);
-	printf("Cadena src = %s\n", cde);
-	printf("ft_memcpy = %p\n", ft_memcpy(cde0, cde, 1));
-	printf("memcpy = %p \n", memcpy(cde0, cde, 1));
-	printf("Cadena dst FINAL= %s\n\n", cde0);
+	//char cde0[6] = "ABCDE";
+	//char cde[6] = "12345";
+	//printf("--memcpy--\n");
+	//printf("Cadena dst= %s\n", cde0);
+	//printf("Cadena src = %s\n", cde);
+	//printf("ft_memcpy = %p\n", ft_memcpy(cde0, cde, 1));
+	//printf("memcpy = %p \n", memcpy(cde0, cde, 1));
+	//printf("Cadena dst FINAL= %s\n\n", cde0);
 
 	//char def1[6] = "ABCDE";
 	//char def2[6] = "12345";
+	//char def3[6] = "ABCDE";
+	//char def4[6] = "12345";
 	//printf("--memmove--\n");
 	//printf("Cadena dst= %s\n", def1);
 	//printf("Cadena src = %s\n", def2);
-	//printf("ft_memmove = %s\n", ft_memmove(def1, def2, 6));
-	//printf("memmove = %s\n", memmove(def1, def2, 6));
+	//printf("ft_memmove = %p\n", ft_memmove(def1, def2, 6));
+	//printf("Cadena dst = %s\n", def1);
+	//printf("Cadena src = %s\n", def2);
+	//printf("memmove = %p\n", memmove(def3, def4, 6));
 	//printf("Cadena dst = %s\n", def1);
 	//printf("Cadena src = %s\n\n", def2);
 	
@@ -117,20 +121,20 @@ int	main(){
 	//printf("--strlcpy--\n");
 	//printf("Cadena dst= %s\n", abc2);
 	//printf("Cadena src = %s\n", abc21);
-	//printf("ft_strlcpy = %i\n", ft_strlcpy(abc2, abc21, 6));
-	//printf("strlcpy = %lu\n", strlcpy(abc2, abc21, 6));
+	//printf("ft_strlcpy = %li\n", ft_strlcpy(abc2, abc21, 6));
+	////printf("strlcpy = %u\n", strlcpy(abc2, abc21, 6));
 	//printf("Cadena dst= %s\n", abc2);
 	//printf("Cadena src = %s\n\n", abc21);
 
-	//char abc3[200] = "This is ";
-	//char abc31[200] = "a potentially long string";
-	//printf("--strlcat--\n");
-	//printf("Cadena dst= %s\n", abc3);
-	//printf("Cadena src = %s\n", abc31);
-	//printf("ft_strlcat = %i\n", ft_strlcat(abc3, abc31, 9));
-	//printf("strlcat = %lu\n", strlcpy(abc3, abc31, 8));
-	//printf("Cadena dst= %s\n", abc3);
-	//printf("Cadena src = %s\n", abc31);
+	char abc3[200] = "This is ";
+	char abc31[200] = "a potentially long string";
+	printf("--strlcat--\n");
+	printf("Cadena dst= %s\n", abc3);
+	printf("Cadena src = %s\n", abc31);
+	printf("ft_strlcat = %li\n", ft_strlcat(abc3, abc31, 9));
+	printf("strlcat = %u\n", strlcat(abc3, abc31, 8));
+	printf("Cadena dst= %s\n", abc3);
+	printf("Cadena src = %s\n", abc31);
 
 	//printf("--toupper--");
 	//printf("Caracter c\n");
@@ -181,7 +185,11 @@ int	main(){
 
 
 	//printf("--memcmp--\n");
-
+	char	atoi[]= "	  -HOla45" 
+	printf("--atoi--\n");
+	printf("Cadena = %s\n", atoi);
+	printf("ft_atoi = %i\n", ft_atoi(atoi));
+	printf("atoi = %i\n", atoi(atoi));
 
 
 

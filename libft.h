@@ -33,17 +33,17 @@ void		ft_bzero(void *s, size_t n);
 
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 
-char	*ft_memmove(char *dst, char *src, int len);
+void		*ft_memmove(void *dest, const void *src, size_t len);
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 
-int	ft_strlcat(char *dst, char *src,int dstsize);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
 
 char	ft_toupper(int c);
 
 char	ft_tolower(int c);
 
-char	*ft_strchr(char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
 char	*ft_strrchr(char *s, int c);
 
@@ -52,3 +52,5 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_memchr(char *s, int c, int n);
 
 int		ft_memcmp(char *s1, char *s2, unsigned int n);
+
+int		ft_atoi(char *str);

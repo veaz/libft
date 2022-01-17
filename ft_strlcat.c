@@ -10,43 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" //DELETE
+#include "libft.h"
 
-int	counter(char *ptr)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	c;
+	size_t	len;
 
-	c = 0;
-	while (ptr[c] != '\0')
-	{
-		c++;
-	}
-	return (c);
-}
-
-int	ft_strlcat(char *dst, char *src, int dstsize)
-{
-	int	srcsize;
-	int	count;
-	//int	countsrc;
-	//int	countdst;
-
-	srcsize = counter(src);
-	//countsrc = srcsize;
-	//countdst = dstsize;
-	count = 1;
-	
-	while (count <= 5)
-	{
-		//*(dst + (dstsize + count)) = *(src + count);
-		//dst[dstsize + count] = src[count];
-		*(dst + (dstsize + count)) = 'P'; //NO SE QUIERE AGREGAR MAS DEL TAMANO DE DST
-		count++;
-	}
-	
-	printf("CADENA DST = %s\n", dst);
-
-
-	return (dstsize + srcsize);
-
+	len = ft_strlen(dst) + ft_strlen(src);
+	ft_strlcpy(dst, src, size);
+	return(len);
 }

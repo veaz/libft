@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char *ptr;
+	char	*ptr;
 
-	ptr = s;
+	ptr = (char *)s;
 	while (*ptr != '\0')
 	{	
 		if (*ptr == c)
