@@ -6,9 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 13:54:32 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 13:58:42 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/18 14:31:25 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	ft_toupper(int c)
 {

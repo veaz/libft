@@ -23,13 +23,14 @@ NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 OBJS = $(SRCS:.c=.o)
-AR = ar rc
+AR = ar -rv
+CC = gcc -c
 
 all: $(NAME) 
-	echo "realizado"
+	@echo "----------Realizado-----------"
 
 $(NAME): $(OBJS)
-	$(AR) -o $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
