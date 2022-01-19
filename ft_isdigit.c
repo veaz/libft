@@ -6,9 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:46:24 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/14 13:32:54 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/19 09:24:37 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

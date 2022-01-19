@@ -6,9 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:41:15 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/18 11:43:47 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/19 09:22:08 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

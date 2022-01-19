@@ -6,9 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:51:16 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/14 15:05:45 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/19 09:24:59 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

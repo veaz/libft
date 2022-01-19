@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 14:18:15 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/18 09:41:17 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/19 11:24:46 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ char	*ft_strrchr(const char *s, int c)
 
 	ptr = (char *)s;
 	len = ft_strlen(ptr);
+	while (c >= 256)
+		c = c - 256;
 	while (len >= 0)
 	{	
 		if (ptr[len] == c)
 			return (&ptr[len]);
 		len--;
 	}
-	return (ptr);
+	return (NULL);
 }

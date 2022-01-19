@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/19 09:17:09 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/19 09:17:40 by vaguilar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	size_t	totalsize;
-	
+
 	totalsize = nmemb * size;
 	ptr = malloc(totalsize);
 	if (ptr == NULL)

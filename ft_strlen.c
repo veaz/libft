@@ -6,9 +6,11 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:54:04 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/14 15:48:23 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/19 09:27:49 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(const char *s)
 {

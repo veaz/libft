@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:58:42 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/18 13:40:24 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/19 13:18:30 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ void	*ft_memchr(const void *s, int c, size_t n);
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+int		ft_atoi(const char *str);
+
 void	*ft_calloc(size_t nmemb, size_t size);
+
+char	*ft_strdup(const char *s);
 
 #endif
