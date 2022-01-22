@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:43:39 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 18:48:27 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/18 11:49:43 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,25 +116,25 @@ int	main(){
 	//printf("Cadena dst = %s\n", def1);
 	//printf("Cadena src = %s\n\n", def2);
 	
-	char abc2[6] = "ABCDE";
-	char abc21[6] = "TESTE";
-	printf("--strlcpy--\n");
-	printf("Cadena dst= %s\n", abc2);
-	printf("Cadena src = %s\n", abc21);
-	printf("ft_strlcpy = %li\n", ft_strlcpy(abc2, abc21, 6));
-	//printf("strlcpy = %u\n", strlcpy(abc2, abc21, 6));
-	printf("Cadena dst= %s\n", abc2);
-	printf("Cadena src = %s\n\n", abc21);
+	//char abc2[6] = "ABCDE";
+	//char abc21[6] = "TESTE";
+	//printf("--strlcpy--\n");
+	//printf("Cadena dst= %s\n", abc2);
+	//printf("Cadena src = %s\n", abc21);
+	//printf("ft_strlcpy = %li\n", ft_strlcpy(abc2, abc21, 6));
+	////printf("strlcpy = %u\n", strlcpy(abc2, abc21, 6));
+	//printf("Cadena dst= %s\n", abc2);
+	//printf("Cadena src = %s\n\n", abc21);
 
-	char abc3[200] = "This is ";
-	char abc31[200] = "a potentially long string";
-	printf("--strlcat--\n");
-	printf("Cadena dst= %s\n", abc3);
-	printf("Cadena src = %s\n", abc31);
-	printf("ft_strlcat = %li\n", ft_strlcat(abc3, abc31, 9));
-	//printf("strlcat = %u\n", strlcpy(abc3, abc31, 8));
-	printf("Cadena dst= %s\n", abc3);
-	printf("Cadena src = %s\n", abc31);
+	//char abc3[200] = "This is ";
+	//char abc31[200] = "a potentially long string";
+	//printf("--strlcat--\n");
+	//printf("Cadena dst= %s\n", abc3);
+	//printf("Cadena src = %s\n", abc31);
+	//printf("ft_strlcat = %li\n", ft_strlcat(abc3, abc31, 9));
+	//printf("strlcat = %u\n", strlcat(abc3, abc31, 8));
+	//printf("Cadena dst= %s\n", abc3);
+	//printf("Cadena src = %s\n", abc31);
 
 	//printf("--toupper--");
 	//printf("Caracter c\n");
@@ -172,20 +172,24 @@ int	main(){
 	//char	memchr2 = '.';
 	//printf("--memchr--\n");
 	//printf("Parametros (www.google.com, '.')\n");
-	//printf("ft_memchr = %s\n", ft_memchr(memchr1, memchr2, 14));
-	//printf("memchr = %s\n\n", memchr(memchr1, memchr2, 14));
+	//printf("ft_memchr = %s\n", ft_memchr(memchr1, memchr2, 100));
+	//printf("memchr = %s\n\n", memchr(memchr1, memchr2, 100));
 
 	//printf("--memcmp--\n");
 	//char	memcmp1[13] = "AAAAAAAAAAAA";
-	//char	memcmp2[13] = "AAAAAAAAAAAA";
+	//char	memcmp2[13] = "AAAAAAAAAAbb";
 	//printf("1 = %s\n", memcmp1);
 	//printf("2 = %s\n", memcmp2);
-	//printf("ft_strncmp = %d\n\n", ft_memcmp(memcmp1, memcmp2, 13));
-	//printf("strncmp = %d\n\n", memcmp(memcmp1, memcmp2, 13));
-
-
-	//printf("--memcmp--\n");
-
+	//printf("ft_memcmp = %d\n\n", ft_memcmp(memcmp1, memcmp2, 13));
+	//printf("memcmp = %d\n\n", memcmp(memcmp1, memcmp2, 13));
+	
+	char	atoi[]= "	  -HOla45";
+	char	*ptratoi;
+	ptratoi = &atoi[0];
+	printf("--atoi--\n");
+	printf("Cadena = %s\n", atoi);
+	printf("ft_atoi = %i\n", ft_atoi(ptratoi));
+	printf("atoi = %i\n", atoi(ptratoi));
 
 
 

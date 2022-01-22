@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:43:39 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/18 10:42:21 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/18 13:49:27 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,15 +126,19 @@ int	main(){
 	//printf("Cadena dst= %s\n", abc2);
 	//printf("Cadena src = %s\n\n", abc21);
 
-	//char abc3[200] = "This is ";
-	//char abc31[200] = "a potentially long string";
-	//printf("--strlcat--\n");
-	//printf("Cadena dst= %s\n", abc3);
-	//printf("Cadena src = %s\n", abc31);
-	//printf("ft_strlcat = %li\n", ft_strlcat(abc3, abc31, 9));
-	//printf("strlcat = %u\n", strlcat(abc3, abc31, 8));
-	//printf("Cadena dst= %s\n", abc3);
-	//printf("Cadena src = %s\n", abc31);
+	char strlcat1[200] = "pqrstuvwxyz";
+	char strlcat2[200] = "abcd";
+	char strlcat3[200] = "pqrstuvwxyz";
+	char strlcat4[200] = "abcd";
+	printf("--strlcat--\n");
+	printf("Cadena dst= %s\n", strlcat1);
+	printf("Cadena src = %s\n", strlcat2);
+	printf("ft_strlcat = %li\n", ft_strlcat(strlcat1, strlcat2,5));
+	printf("strlcat = %lu\n", strlcat(strlcat3, strlcat4, 5));
+	printf("ft_strlcat cadena dst= %s\n", strlcat1);
+	printf("ft_strlcat cadena src = %s\n", strlcat2);
+	printf("strlcat cadena dst= %s\n", strlcat1);
+	printf("strlcat cadena src = %s\n", strlcat2);
 
 	//printf("--toupper--");
 	//printf("Caracter c\n");
@@ -175,23 +179,21 @@ int	main(){
 	//printf("ft_memchr = %s\n", ft_memchr(memchr1, memchr2, 100));
 	//printf("memchr = %s\n\n", memchr(memchr1, memchr2, 100));
 
-	printf("--memcmp--\n");
-	char	memcmp1[13] = "AAAAAAAAAAAA";
-	char	memcmp2[13] = "AAAAAAAAAAbb";
-	printf("1 = %s\n", memcmp1);
-	printf("2 = %s\n", memcmp2);
-	printf("ft_memcmp = %d\n\n", ft_memcmp(memcmp1, memcmp2, 13));
-	printf("memcmp = %d\n\n", memcmp(memcmp1, memcmp2, 13));
-
-
-	
-	
+	//printf("--memcmp--\n");
+	//char	memcmp1[13] = "AAAAAAAAAAAA";
+	//char	memcmp2[13] = "AAAAAAAAAAbb";
+	//printf("1 = %s\n", memcmp1);
+	//printf("2 = %s\n", memcmp2);
+	//printf("ft_memcmp = %d\n\n", ft_memcmp(memcmp1, memcmp2, 13));
+	//printf("memcmp = %d\n\n", memcmp(memcmp1, memcmp2, 13));
 	
 	//char	atoi[]= "	  -HOla45";
+	//char	*ptratoi;
+	//ptratoi = &atoi[0];
 	//printf("--atoi--\n");
 	//printf("Cadena = %s\n", atoi);
-	//printf("ft_atoi = %i\n", ft_atoi(atoi));
-	//printf("atoi = %i\n", atoi(&atoi));
+	//printf("ft_atoi = %i\n", ft_atoi(ptratoi));
+	//printf("atoi = %i\n", atoi(ptratoi));
 
 
 
