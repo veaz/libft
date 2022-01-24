@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 09:21:00 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/19 09:52:57 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/23 15:47:48 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strdup(const char *s)
 		return (NULL);
 	else
 	{
-		ft_memcpy(ptr, s, len);
+		ft_strlcpy(ptr, s, len + 1);
 		return (ptr);
 	}
 }

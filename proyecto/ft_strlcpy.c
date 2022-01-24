@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 12:55:50 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 12:11:18 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/23 12:54:58 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/23 12:55:08 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	pos;
+	size_t	i;
+	size_t	pos;
 
 	i = 0;
 	pos = 0;
 	while (src[i] != '\0')
 		i++;
-	if (size != 0)
+	if (dstsize != 0)
 	{
-		while (src[pos] != '\0' && pos < (size - 1))
+		while (src[pos] != '\0' && pos < (dstsize - 1))
 		{
 			dst[pos] = src[pos];
 			pos++;

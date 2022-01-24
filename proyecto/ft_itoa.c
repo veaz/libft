@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 14:18:15 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/24 10:03:51 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/23 20:55:24 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/23 21:29:17 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
+char	*ft_itoa(int n)
 {
-	char	*ptr;
-	int		len;
-
-	ptr = (char *)s;
-	len = ft_strlen(ptr);
-	while (c >= 256)
-		c = c - 256;
-	while (len >= 0)
-	{	
-		if (ptr[len] == c)
-			return (&ptr[len]);
-		len--;
-	}
-	return (NULL);
+	char	*ptr = 0;
+	*ptr = n + 48;
+	return (ptr);
 }

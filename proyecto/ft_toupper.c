@@ -6,16 +6,15 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 13:54:32 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/19 12:12:34 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/23 10:59:01 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(int c)
-{
-	char	caracter;
+#include "libft.h"
 
-	caracter = (char)c;
-	if (caracter >= 'a' && caracter <= 'z')
-		caracter = caracter - 32;
-	return (caracter);
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
 }

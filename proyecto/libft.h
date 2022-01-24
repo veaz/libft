@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:58:42 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/19 13:18:30 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/24 09:16:33 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-char	ft_toupper(int c);
+int		ft_toupper(int c);
 
-char	ft_tolower(int c);
+int		ft_tolower(int c);
 
 char	*ft_strchr(const char *s, int c);
 
@@ -68,6 +68,8 @@ char	*ft_substr(char const *s, size_t start, size_t len);
 
 char	*ft_strjoin(char const *s1, char const *s2);
 
-char	*ft_strstrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set);
+
+char	*ft_itoa(int n);
 
 #endif

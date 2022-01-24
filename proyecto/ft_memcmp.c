@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 22:02:56 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/19 13:01:51 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/23 11:15:58 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	ptrs2 = (unsigned char *)s2;
 	while (count < n)
 	{
-		if (ptrs1[count] > ptrs2[count])
+		if (ptrs1[count] != ptrs2[count])
 			return (ptrs1[count] - ptrs2[count]);
-		else if (ptrs1[count] < ptrs2[count])
-			return ((ptrs1[count] - ptrs2[count]));
 		count++;
 	}
 	return (0);

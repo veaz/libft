@@ -23,7 +23,8 @@ SRCS = 	ft_atoi.c \
 	ft_strdup.c \
 	ft_substr.c \
 	ft_strjoin.c \
-	ft_strstrim.c
+	ft_strtrim.c \
+	ft_itoa.c
 
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
