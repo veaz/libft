@@ -3,7 +3,9 @@
 int	main()
 {
 	printf("----strtim----\n");
-	char * s = ft_strtrim("   xxxtripouille", " x");
+	char *s;
+
+	s = ft_strtrim("   xxxtripouille", " x");
 	printf("Retorno 1 = %s\n\n\n", s);
 
 	s = ft_strtrim("tripouille   xxx", " x");
