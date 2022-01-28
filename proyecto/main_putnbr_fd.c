@@ -2,5 +2,5 @@
 
 int	main()
 {
-	ft_putnbr_fd(42, 1);
+	ft_putnbr_fd(421, 1);
 }
