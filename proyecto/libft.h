@@ -12,9 +12,9 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <ctype.h>
-# include <string.h>
-# include <unistd.h> //INNECESARIA?
+# include <ctype.h> //DELETE
+# include <string.h> //DELETE
+# include <unistd.h>
 # include <stdio.h> //DELETE
 # include <stdlib.h> //calloc
 
@@ -72,12 +72,14 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_itoa(int n);
 
-char	*ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c);
 
 void	ft_putchar_fd(char c, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

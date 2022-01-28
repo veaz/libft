@@ -16,7 +16,7 @@ int	ft_countchar(char const *s, char c)
 	
 }
 
-char *ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int	x;
 	int	n;
@@ -43,5 +43,5 @@ char *ft_split(char const *s, char c)
 
 	
 
-	return ((char *)s);
+	return ((char **)s);
 }

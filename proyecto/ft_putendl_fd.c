@@ -2,6 +2,13 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
-	write(fd, (int)'\n', 1);
+	int	x;
+
+	x = 0;
+	while (s[x] != '\0')
+	{
+		ft_putchar_fd(s[x], fd);
+		x++;
+	}
+	write(fd, "\n", 1);
 }
