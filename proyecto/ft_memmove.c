@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 11:25:26 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/23 14:01:25 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/29 13:14:45 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	a = (int)len - 1;
 	ptrdst = (unsigned char *)dst;
 	ptrsrc = (unsigned char *)src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	if (len > 0)
 	{
 		if (ptrsrc <= ptrdst)

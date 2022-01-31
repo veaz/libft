@@ -1,40 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/29 13:02:31 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/30 12:21:20 by vaguilar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int	ft_intlen(int c)
+static	int	ft_sign(int n, int fd)
 {
-	int	x;
-
-	x = 1;
-	if (c > 0 && c < 10)
-	return (1);
-	while(c /= 10)
-		x++;
-	return (x);
-}
-
-void ft_putnbr_fd(int n, int fd)
-{
-	char c;
-	int	t;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
 		n = n * -1;
 	}
-	printf("n tiene %i numeros\n", ft_intlen(n));
-	t = (n % 100) / 100; 
-	printf("t = %i", t);
-	//while (n >= 10)
-	//{
-		//printf("n = %i\n", n);
-	//	c = n % 10 + 48;
-		//printf("c = %c\n", c);
-	//	ft_putchar_fd(c, fd);
-	//	n = n / 10;
-	//}
-	
-	c = n % 10 + 48;
-	printf("\nc = %c\n", c);
-	ft_putchar_fd(c, fd);
+	return (n);
+}
 
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{
+		n = ft_sign(n, fd);
+		ft_putnbr_fd(n, fd);
+	}
+	else
+	{
+		if (n / 10 != 0)
+			ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd((n % 10) + 48, fd);
+	}
 }

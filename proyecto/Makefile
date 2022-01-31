@@ -29,13 +29,26 @@ SRCS = 	ft_atoi.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c \
+	ft_strmapi.c \
+	ft_striteri.c
+
+BONUS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 OBJS = $(SRCS:.c=.o)
-AR = ar -rv
+BONUSOBJS = $(BONUS:.c=.o)
+AR = ar -rcs
 CC = gcc -c
 
 all: $(NAME) 
@@ -43,6 +56,9 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
+
+bonus: $(BONUSOBJS)
+	$(AR) $(NAME) $(BONUSOBJS)
 
 clean:
 	$(RM) $(OBJS)

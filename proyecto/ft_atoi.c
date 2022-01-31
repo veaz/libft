@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:41:15 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/23 21:16:22 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/30 22:01:19 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_atoi(const char *str)
 	if (str[x] == '+' || str[x] == '-')
 	{
 		if (str[x] == '-')
-		sig = sig * -1;
+			sig = sig * -1;
 		x++;
 	}
 	while (str[x] >= '0' && str[x] <= '9')

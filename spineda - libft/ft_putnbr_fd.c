@@ -6,7 +6,7 @@
 /*   By: spineda- <spineda-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 13:54:56 by spineda-          #+#    #+#             */
-/*   Updated: 2022/01/25 13:55:01 by spineda-         ###   ########.fr       */
+/*   Updated: 2022/01/30 11:37:06 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,4 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putnbr_fd(n / 10, fd);
 		ft_putchar_fd((n % 10) + '0', fd);
 	}
-
+}
