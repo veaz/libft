@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_countchar(char const *s, char c) //Innecesario
+static int	ft_countchar(char const *s, char c) //Innecesario
 {
 	int	n;
 	int	x;
@@ -18,7 +18,7 @@ int	ft_countchar(char const *s, char c) //Innecesario
 	
 }
 
-int	ft_countwords(char *s, char c, int del)
+static int	ft_countwords(char *s, char c, int del)
 {
 	int	i;
 	int w;
@@ -31,9 +31,7 @@ int	ft_countwords(char *s, char c, int del)
 	while (s[i] != '\0')
 	{
 		while (s[i] == c)
-		{
 			i++;
-		}
 		if (s[i] != c && s[i] != '\0')
 		{
 			while (s[i] != c && s[i] != '\0')
@@ -47,7 +45,7 @@ int	ft_countwords(char *s, char c, int del)
 	return (temp);
 }
 
-int	ft_lenword(const char *s, char c)
+static int	ft_lenword(const char *s, char c)
 {
 	int	x;
 

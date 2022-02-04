@@ -14,9 +14,9 @@
 # define LIBFT_H
 # include <ctype.h> //DELETE
 # include <string.h> //DELETE
-# include <unistd.h>
+# include <unistd.h> //Necesario para write
 # include <stdio.h> //DELETE
-# include <stdlib.h> //calloc
+# include <stdlib.h> //Necesario para manejar malloc
 
 typedef struct s_list
 {
