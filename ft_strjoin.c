@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 11:25:26 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/29 13:14:45 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/22 09:40:58 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/23 17:49:37 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int				a;
-	unsigned char	*ptrdst;
-	unsigned char	*ptrsrc;
+	char	*ptr;
+	int		len;
+	int		lens1;
+	int		lens2;	
 
-	a = (int)len - 1;
-	ptrdst = (unsigned char *)dst;
-	ptrsrc = (unsigned char *)src;
-	if (dst == NULL && src == NULL)
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	len = lens1 + lens2;
+	ptr = malloc((len + 1) * sizeof(char));
+	if (!ptr)
 		return (NULL);
-	if (len > 0)
-	{
-		if (ptrsrc <= ptrdst)
-		{
-			while (a >= 0)
-			{
-				ptrdst[a] = ptrsrc[a];
-				a--;
-			}
-		}
-		else
-			ft_memcpy(dst, src, len);
-	}
-	return (dst);
+	ft_strlcpy(ptr, s1, len + 1);
+	ft_strlcat(ptr, s2, len + 1);
+	return (ptr);
 }

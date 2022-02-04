@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 11:25:26 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/29 13:14:45 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/31 11:24:16 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/31 11:24:19 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int				a;
-	unsigned char	*ptrdst;
-	unsigned char	*ptrsrc;
+	t_list	*newlist;
+	t_list	*temp;
 
-	a = (int)len - 1;
-	ptrdst = (unsigned char *)dst;
-	ptrsrc = (unsigned char *)src;
-	if (dst == NULL && src == NULL)
+	if (!lst || !f || !del)
 		return (NULL);
-	if (len > 0)
+	newlist = ft_lstnew(f(lst->content));
+	if (newlist == NULL)
+		return (NULL);
+	temp = newlist;
+	lst = lst->next;
+	while (lst != NULL)
 	{
-		if (ptrsrc <= ptrdst)
+		temp->next = ft_lstnew(f(lst->content));
+		if (temp->next == NULL)
 		{
-			while (a >= 0)
-			{
-				ptrdst[a] = ptrsrc[a];
-				a--;
-			}
+			del(newlist);
+			return (NULL);
 		}
-		else
-			ft_memcpy(dst, src, len);
+		lst = lst->next;
+		temp = temp->next;
 	}
-	return (dst);
+	return (newlist);
 }

@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 11:25:26 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/29 13:14:45 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/31 01:26:21 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/31 01:27:14 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	int				a;
-	unsigned char	*ptrdst;
-	unsigned char	*ptrsrc;
+	t_list	*ptr;
 
-	a = (int)len - 1;
-	ptrdst = (unsigned char *)dst;
-	ptrsrc = (unsigned char *)src;
-	if (dst == NULL && src == NULL)
+	ptr = (t_list *)malloc(sizeof(t_list));
+	if (ptr == NULL)
 		return (NULL);
-	if (len > 0)
-	{
-		if (ptrsrc <= ptrdst)
-		{
-			while (a >= 0)
-			{
-				ptrdst[a] = ptrsrc[a];
-				a--;
-			}
-		}
-		else
-			ft_memcpy(dst, src, len);
-	}
-	return (dst);
+	ptr->content = content;
+	ptr->next = NULL;
+	return (ptr);
 }

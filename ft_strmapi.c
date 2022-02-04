@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 11:25:26 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/29 13:14:45 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/29 11:16:13 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/29 12:35:09 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int				a;
-	unsigned char	*ptrdst;
-	unsigned char	*ptrsrc;
+	unsigned int	x;
+	unsigned int	len;
+	char			*ptr;
 
-	a = (int)len - 1;
-	ptrdst = (unsigned char *)dst;
-	ptrsrc = (unsigned char *)src;
-	if (dst == NULL && src == NULL)
+	x = 0;
+	len = ft_strlen(s);
+	if (!s || !f)
 		return (NULL);
-	if (len > 0)
+	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (!ptr)
+		return (NULL);
+	while (x < len)
 	{
-		if (ptrsrc <= ptrdst)
-		{
-			while (a >= 0)
-			{
-				ptrdst[a] = ptrsrc[a];
-				a--;
-			}
-		}
-		else
-			ft_memcpy(dst, src, len);
+		ptr[x] = f(x, s[x]);
+		x++;
 	}
-	return (dst);
+	ptr[x] = '\0';
+	return (ptr);
 }
