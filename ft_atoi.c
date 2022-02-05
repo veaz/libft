@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/22 16:44:55 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/23 18:48:46 by vaguilar         ###   ########.fr       */
+/*   Created: 2021/11/15 21:41:15 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/30 22:01:19 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lendst;
-	size_t	lensrc;
+	int	x;
+	int	sig;
+	int	num;
 
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	j = lendst;
-	i = 0;
-	if (lendst < dstsize - 1 && dstsize > 0)
+	x = 0;
+	sig = 1;
+	num = 0;
+	while (str[x] == ' ' || (str[x] >= '\t' && str[x] <= '\r'))
+		x++;
+	if (str[x] == '+' || str[x] == '-')
 	{
-		while (src[i] != '\0' && lendst + i < dstsize - 1)
-		{
-		dst[j] = src[i];
-			j++;
-			i++;
-		}
-		dst[j] = '\0';
+		if (str[x] == '-')
+			sig = sig * -1;
+		x++;
 	}
-	if (lendst > dstsize)
-		lendst = dstsize;
-	return (lendst + lensrc);
+	while (str[x] >= '0' && str[x] <= '9')
+	{
+		num = (str[x] - '0') + (num * 10);
+		x++;
+	}
+	return (num * sig);
 }

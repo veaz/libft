@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 11:25:26 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/29 13:14:45 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/19 13:03:24 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/23 13:51:39 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int				a;
-	unsigned char	*ptrdst;
-	unsigned char	*ptrsrc;
+	size_t	x;
+	size_t	y;
+	size_t	z;
 
-	a = (int)len - 1;
-	ptrdst = (unsigned char *)dst;
-	ptrsrc = (unsigned char *)src;
-	if (dst == NULL && src == NULL)
+	x = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	if (haystack[0] == '\0' || len <= 0)
 		return (NULL);
-	if (len > 0)
+	while (x < len && haystack[x] != '\0')
 	{
-		if (ptrsrc <= ptrdst)
+		y = 0;
+		z = 0;
+		while (haystack[x + y] == needle[y]
+			&& (x + y) < len && haystack[x + y] != '\0')
 		{
-			while (a >= 0)
-			{
-				ptrdst[a] = ptrsrc[a];
-				a--;
-			}
+			z = x;
+			y++;
 		}
-		else
-			ft_memcpy(dst, src, len);
+		if ((size_t)ft_strlen(needle) == y)
+			return ((char *)haystack + z);
+		x++;
 	}
-	return (dst);
+	return (0);
 }

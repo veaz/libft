@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/22 16:44:55 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/23 18:48:46 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/19 09:17:09 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/28 14:38:45 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lendst;
-	size_t	lensrc;
+	void	*ptr;
+	size_t	totalsize;
 
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	j = lendst;
-	i = 0;
-	if (lendst < dstsize - 1 && dstsize > 0)
+	totalsize = count * size;
+	ptr = malloc(totalsize);
+	if (!ptr)
+		return (NULL);
+	else
 	{
-		while (src[i] != '\0' && lendst + i < dstsize - 1)
-		{
-		dst[j] = src[i];
-			j++;
-			i++;
-		}
-		dst[j] = '\0';
+		ft_bzero(ptr, totalsize);
+		return (ptr);
 	}
-	if (lendst > dstsize)
-		lendst = dstsize;
-	return (lendst + lensrc);
 }

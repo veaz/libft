@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/22 16:44:55 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/23 18:48:46 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/29 13:02:31 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/30 12:21:20 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+static	int	ft_sign(int n, int fd)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lendst;
-	size_t	lensrc;
-
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	j = lendst;
-	i = 0;
-	if (lendst < dstsize - 1 && dstsize > 0)
+	if (n < 0)
 	{
-		while (src[i] != '\0' && lendst + i < dstsize - 1)
-		{
-		dst[j] = src[i];
-			j++;
-			i++;
-		}
-		dst[j] = '\0';
+		ft_putchar_fd('-', fd);
+		n = n * -1;
 	}
-	if (lendst > dstsize)
-		lendst = dstsize;
-	return (lendst + lensrc);
+	return (n);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{
+		n = ft_sign(n, fd);
+		ft_putnbr_fd(n, fd);
+	}
+	else
+	{
+		if (n / 10 != 0)
+			ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd((n % 10) + 48, fd);
+	}
 }

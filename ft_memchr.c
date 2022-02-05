@@ -6,22 +6,26 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 17:05:14 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 17:15:13 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/23 11:10:54 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_memchr(char *s, int c, int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	x;
-	char *ptr;
+	size_t			x;
+	unsigned char	*ptr;
+	unsigned char	caracter;
 
 	x = 0;
-	ptr = s;
-	while (x <= n)
+	ptr = (unsigned char *)s;
+	caracter = (unsigned char)c;
+	while (x < n)
 	{	
-		if (*(ptr + x) == c)
+		if (*(ptr + x) == caracter)
 			return (ptr + x);
-		x++;;
+		x++;
 	}
-	return (ptr);
+	return (NULL);
 }

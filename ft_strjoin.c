@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/22 16:44:55 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/23 18:48:46 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/22 09:40:58 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/23 17:49:37 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lendst;
-	size_t	lensrc;
+	char	*ptr;
+	int		len;
+	int		lens1;
+	int		lens2;	
 
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	j = lendst;
-	i = 0;
-	if (lendst < dstsize - 1 && dstsize > 0)
-	{
-		while (src[i] != '\0' && lendst + i < dstsize - 1)
-		{
-		dst[j] = src[i];
-			j++;
-			i++;
-		}
-		dst[j] = '\0';
-	}
-	if (lendst > dstsize)
-		lendst = dstsize;
-	return (lendst + lensrc);
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	len = lens1 + lens2;
+	ptr = malloc((len + 1) * sizeof(char));
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, s1, len + 1);
+	ft_strlcat(ptr, s2, len + 1);
+	return (ptr);
 }

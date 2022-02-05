@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/22 16:44:55 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/23 18:48:46 by vaguilar         ###   ########.fr       */
+/*   Created: 2022/01/29 13:02:53 by vaguilar          #+#    #+#             */
+/*   Updated: 2022/01/30 23:37:45 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lendst;
-	size_t	lensrc;
+	int	x;
 
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	j = lendst;
-	i = 0;
-	if (lendst < dstsize - 1 && dstsize > 0)
+	x = 0;
+	while (s[x] != '\0')
 	{
-		while (src[i] != '\0' && lendst + i < dstsize - 1)
-		{
-		dst[j] = src[i];
-			j++;
-			i++;
-		}
-		dst[j] = '\0';
+		ft_putchar_fd(s[x], fd);
+		x++;
 	}
-	if (lendst > dstsize)
-		lendst = dstsize;
-	return (lendst + lensrc);
 }

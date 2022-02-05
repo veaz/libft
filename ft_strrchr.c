@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 14:18:15 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 15:07:58 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/24 10:03:51 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s);
+#include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	x;
-	char *ptr;
+	char	*ptr;
+	int		len;
 
-	x = ft_strlen(s);
-	ptr = s;
-	while (x > 0)
+	ptr = (char *)s;
+	len = ft_strlen(ptr);
+	while (c >= 256)
+		c = c - 256;
+	while (len >= 0)
 	{	
-		if (ptr[x] == '.')
-			return (&ptr[x]);
-		x--;
+		if (ptr[len] == c)
+			return (&ptr[len]);
+		len--;
 	}
-	return (ptr);
+	return (NULL);
 }

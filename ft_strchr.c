@@ -6,22 +6,26 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 14:18:15 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 14:26:31 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/28 14:52:04 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *s, int c)
-{
-	int	x;
-	char *ptr;
+#include "libft.h"
 
-	x = 0;
-	ptr = s;
+char	*ft_strchr(const char *s, int c)
+{
+	char	*ptr;
+
+	ptr = (char *)s;
+	while (c >= 256)
+		c = c - 256;
 	while (*ptr != '\0')
 	{	
 		if (*ptr == c)
 			return (ptr);
 		ptr++;
 	}
-	return (ptr);
+	if (*ptr == c)
+		return (ptr);
+	return (NULL);
 }

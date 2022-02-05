@@ -6,11 +6,13 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 14:02:59 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/15 14:07:02 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/01/23 11:04:02 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + 32;
