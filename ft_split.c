@@ -6,7 +6,7 @@
 /*   By: vaguilar <vaguilar@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 14:18:15 by vaguilar          #+#    #+#             */
-/*   Updated: 2022/01/24 10:03:51 by vaguilar         ###   ########.fr       */
+/*   Updated: 2022/02/05 08:10:24 by vaguilar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,6 @@ char	**ft_split(char const *s, char c)
 		}
 		count++;
 	}
-	array[count] = '\0';
+	array[count] = 0;
 	return (array);
 }

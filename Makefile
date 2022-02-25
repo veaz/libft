@@ -51,13 +51,13 @@ BONUSOBJS = $(BONUS:.c=.o)
 AR = ar -rcs
 CC = gcc -c
 
-all: $(NAME) 
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(BONUSOBJS)
-	$(AR) $(NAME) $(BONUSOBJS)
+bonus: $(OBJS) $(BONUSOBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUSOBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUSOBJS)
