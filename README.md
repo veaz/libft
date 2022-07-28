@@ -27,4 +27,5 @@ Se debe programar algunas funciones de la librería estándar de C (libc), así 
 | memcmp      |         |        |
 | strnstr      |         |        |
 | atoi      |         |        |
-
+| calloc      |         |        |
+| strdup      |         |        |
