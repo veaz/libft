@@ -76,21 +76,18 @@ Funciones de la libreria estandar de c
 
 • ft_putnbr_fd
 
-# Bonus
-• ft_lstnew
 
-• ft_lstadd_front
 
-• ft_lstsize
-
-• ft_lstlast
-
-• ft_lstadd_back
-
-• ft_lstdelone
-
-• ft_lstclear
-
-• ft_lstiter
-
-• ft_lstmap
+| Funciones libc | Funciones adicionales | Funciones bonus |
+| :---:         |     :---:      |          :---: |
+| git    | git      | ft_lstnew     |
+| git      | git        | ft_lstadd_front       |
+| git      | git        | ft_lstsize       |
+| git      | git        | ft_lstlast       |
+| git      | git        | ft_lstadd_back       |
+| git      | git        | ft_lstdelone       |
+| git      | git        | ft_lstclear       |
+| git      | git        | ft_lstiter       |
+| git      | git        | ft_lstmap       |
+| git      | git        | git       |
+| git      | git        | git       |
