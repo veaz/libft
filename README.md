@@ -80,14 +80,25 @@ Funciones de la libreria estandar de c
 
 | Funciones libc | Funciones adicionales | Funciones bonus |
 | :---:         |     :---:      |          :---: |
-| git    | git      | ft_lstnew     |
-| git      | git        | ft_lstadd_front       |
-| git      | git        | ft_lstsize       |
-| git      | git        | ft_lstlast       |
-| git      | git        | ft_lstadd_back       |
-| git      | git        | ft_lstdelone       |
-| git      | git        | ft_lstclear       |
-| git      | git        | ft_lstiter       |
-| git      | git        | ft_lstmap       |
-| git      | git        | git       |
-| git      | git        | git       |
+| isalpha    | ft_substr      | ft_lstnew     |
+| isdigit      | ft_strjoin        | ft_lstadd_front       |
+| isalnum      | ft_strtrim        | ft_lstsize       |
+| isascii      | ft_split        | ft_lstlast       |
+| isprint      | ft_itoa        | ft_lstadd_back       |
+| strlen      | ft_strmapi        | ft_lstdelone       |
+| memset      | ft_striteri        | ft_lstclear       |
+| bzero      | ft_putchar_fd        | ft_lstiter       |
+| memcpy      | ft_putstr_fd        | ft_lstmap       |
+| memmove      | ft_putendl_fd        |        |
+| strlcpy      | ft_putnbr_fd        |        |
+| strlcat      |         |        |
+| toupper      |         |        |
+| tolower      |         |        |
+| strchr      |         |        |
+| strrchr      |         |        |
+| strncmp      |         |        |
+| memchr      |         |        |
+| memcmp      |         |        |
+| strnstr      |         |        |
+| atoi      |         |        |
+
