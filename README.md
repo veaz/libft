@@ -5,7 +5,7 @@ Libft is a project that allows you to build your own C library, gathering useful
 
 Main Features:
 
-- Libc Function Reimplementation: Create customized versions of standard libc functions, such as ft_strlen, ft_memcpy, among others.
+- Libc Function Reimplementation: Create customized versions of standard libc functions, such as `ft_strlen`, `ft_memcpy`, among others.
 - Additional Functions: Develop functions that are not present in the libc, but are useful for string and memory manipulations.
 - List Management: In the bonus section, linked list manipulation is introduced with functions to add, delete, and manage nodes.
 
@@ -13,7 +13,7 @@ General Instructions:
 
 Written in C following the 42 Norm (Norminette).
 Includes a Makefile to compile the library.
-Global variables are not allowed, and all files must be compiled with the flags -Wall -Wextra -Werror.
+Global variables are not allowed, and all files must be compiled with the flags `-Wall -Wextra -Werror`.
 
 Contribution:
 
