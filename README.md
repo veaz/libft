@@ -1,25 +1,25 @@
 # Libft - 42 Barcelona
 
-Descripción:
-Libft es un proyecto que te permite construir tu propia biblioteca en C, reuniendo funciones útiles que podrás usar en la mayoría de tus proyectos de C durante el cursus en 42.
+Description:
+Libft is a project that allows you to build your own C library, gathering useful functions that you can use in most of your C projects during the 42 cursus.
 
-Características Principales:
+Main Features:
 
-- Reimplementación de funciones Libc: Crea versiones personalizadas de funciones estándar de la libc, como ft_strlen, ft_memcpy, entre otras.
-- Funciones Adicionales: Desarrolla funciones que no están presentes en la libc, pero que son útiles para manipulaciones de cadenas y memoria.
-- Manejo de Listas: En la sección de bonificación, se introduce la manipulación de listas enlazadas con funciones para agregar, eliminar y gestionar nodos.
+- Libc Function Reimplementation: Create customized versions of standard libc functions, such as ft_strlen, ft_memcpy, among others.
+- Additional Functions: Develop functions that are not present in the libc, but are useful for string and memory manipulations.
+- List Management: In the bonus section, linked list manipulation is introduced with functions to add, delete, and manage nodes.
 
-Instrucciones Generales:
+General Instructions:
 
-Escrito en C siguiendo la Norma de 42 (Norminette).
-Incluye un Makefile para compilar la biblioteca.
-No se permiten variables globales y todos los archivos deben compilarse con los flags -Wall -Wextra -Werror.
+Written in C following the 42 Norm (Norminette).
+Includes a Makefile to compile the library.
+Global variables are not allowed, and all files must be compiled with the flags -Wall -Wextra -Werror.
 
-Contribución:
+Contribution:
 
-Este proyecto es una base fundamental en el cursus de 42, y se anima a los estudiantes a expandirlo a lo largo del año, agregando funciones según lo necesiten en futuros proyectos.
+This project is a fundamental base in the 42 cursus, and students are encouraged to expand it throughout the year, adding functions as needed in future projects.
 
-| Funciones libc | Funciones adicionales | Funciones bonus |
+| Libc functions | Additional functions | Bonus functions |
 | :---:         |     :---:      |          :---: |
 | isalpha    | ft_substr      | ft_lstnew     |
 | isdigit      | ft_strjoin        | ft_lstadd_front       |
