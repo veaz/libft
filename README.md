@@ -1,21 +1,21 @@
 # Libft - 42 Barcelona
 
-Description:
+## Description
 Libft is a project that allows you to build your own C library, gathering useful functions that you can use in most of your C projects during the 42 cursus.
 
-Main Features:
+## Main Features
 
 - Libc Function Reimplementation: Create customized versions of standard libc functions, such as `ft_strlen`, `ft_memcpy`, among others.
 - Additional Functions: Develop functions that are not present in the libc, but are useful for string and memory manipulations.
 - List Management: In the bonus section, linked list manipulation is introduced with functions to add, delete, and manage nodes.
 
-General Instructions:
+## General Instructions
 
 Written in C following the 42 Norm (Norminette).
 Includes a Makefile to compile the library.
 Global variables are not allowed, and all files must be compiled with the flags `-Wall -Wextra -Werror`.
 
-Contribution:
+## Contribution
 
 This project is a fundamental base in the 42 cursus, and students are encouraged to expand it throughout the year, adding functions as needed in future projects.
 
