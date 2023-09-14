@@ -1,8 +1,23 @@
-# libft - 42 Barcelona
+# Libft - 42 Barcelona
 
-Libft es el primer proyecto como estudiante de 42.
-Se debe programar algunas funciones de la librería estándar de C (libc), así como otras funciones que serán útiles a lo largo de todo el cursus.
+Descripción:
+Libft es un proyecto que te permite construir tu propia biblioteca en C, reuniendo funciones útiles que podrás usar en la mayoría de tus proyectos de C durante el cursus en 42.
 
+Características Principales:
+
+- Reimplementación de funciones Libc: Crea versiones personalizadas de funciones estándar de la libc, como ft_strlen, ft_memcpy, entre otras.
+- Funciones Adicionales: Desarrolla funciones que no están presentes en la libc, pero que son útiles para manipulaciones de cadenas y memoria.
+- Manejo de Listas: En la sección de bonificación, se introduce la manipulación de listas enlazadas con funciones para agregar, eliminar y gestionar nodos.
+
+Instrucciones Generales:
+
+Escrito en C siguiendo la Norma de 42 (Norminette).
+Incluye un Makefile para compilar la biblioteca.
+No se permiten variables globales y todos los archivos deben compilarse con los flags -Wall -Wextra -Werror.
+
+Contribución:
+
+Este proyecto es una base fundamental en el cursus de 42, y se anima a los estudiantes a expandirlo a lo largo del año, agregando funciones según lo necesiten en futuros proyectos.
 
 | Funciones libc | Funciones adicionales | Funciones bonus |
 | :---:         |     :---:      |          :---: |
